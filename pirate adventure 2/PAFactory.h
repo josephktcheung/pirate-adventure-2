@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "PACharacter.h"
+#import "PABoss.h"
 
 @interface PAFactory : NSObject
 
 - (NSArray *)tiles;
 - (PACharacter *)character;
+- (PABoss *)boss;
 
 @end
