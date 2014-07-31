@@ -1,5 +1,5 @@
 //
-//  PAFactory.h
+//  PABoss.h
 //  pirate adventure 2
 //
 //  Created by Joseph Cheung on 31/7/14.
@@ -7,13 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PACharacter.h"
-#import "PABoss.h"
 
-@interface PAFactory : NSObject
+@interface PABoss : NSObject
 
-- (NSArray *)tiles;
-- (PACharacter *)character;
-- (PABoss *)boss;
+@property int health;
 
 @end

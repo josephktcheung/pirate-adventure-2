@@ -128,4 +128,11 @@
     return character;
 }
 
+- (PABoss *)boss
+{
+    PABoss *boss = [[PABoss alloc] init];
+    boss.health = 65;
+    return boss;
+}
+
 @end
