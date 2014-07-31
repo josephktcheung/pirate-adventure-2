@@ -86,4 +86,22 @@
     return tilesArray;
 }
 
+- (PACharacter *)character
+{
+    PACharacter *character = [[PACharacter alloc] init];
+    character.health = 100;
+    
+    PAArmor *cloak = [[PAArmor alloc] init];
+    cloak.health = 5;
+    cloak.name = @"Cloak";
+    character.armor = cloak;
+    
+    PAWeapon *fist = [[PAWeapon alloc] init];
+    fist.damage = 10;
+    fist.name = @"Fists";
+    character.weapon = fist;
+    
+    return character;
+}
+
 @end

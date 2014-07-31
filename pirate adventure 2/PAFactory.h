@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PACharacter.h"
 
 @interface PAFactory : NSObject
 
 - (NSArray *)tiles;
+- (PACharacter *)character;
 
 @end
