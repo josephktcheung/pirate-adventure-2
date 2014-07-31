@@ -21,6 +21,7 @@
     bluntedSword.name = @"Blunted sword";
     bluntedSword.damage = 12;
     tile1.weapon = bluntedSword;
+    tile1.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"New weapon" message:@"Taken sword" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
     PATile *tile2 = [[PATile alloc] init];
     tile2.story = @"You have come across an armory. Would you like to upgrade your armor to steel armor?";
@@ -30,6 +31,7 @@
     steelArmor.name = @"Steel armor";
     steelArmor.health = 8;
     tile2.armor = steelArmor;
+    tile2.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"New armor" message:@"Taken steel armor" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
     PATile *tile3 = [[PATile alloc] init];
     tile3.story = @"A mysterious dock appears on the horizon. Should we stop and ask for directions?";
@@ -45,6 +47,8 @@
     parrot.name = @"Parrot";
     parrot.health = 20;
     tile4.armor = parrot;
+    tile4.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"New armor" message:@"Adopted parrot" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
     
     PATile *tile5 = [[PATile alloc] init];
     tile5.story = @"You have stumbled upon a cache of pirate weapons. Would you like to upgrade to a pistol?";
@@ -54,24 +58,31 @@
     pistol.name = @"Pistol";
     pistol.damage = 17;
     tile5.weapon = pistol;
+    tile5.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"New weapon" message:@"Taken pistol" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
     
     PATile *tile6 = [[PATile alloc] init];
     tile6.story = @"You have been captured by pirates and are ordered to walk the plank";
     tile6.action = @"Show no fear";
     tile6.backgroundImage = [UIImage imageNamed:@"PiratePlank.jpg"];
     tile6.healthEffect = -22;
+    tile6.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"Drown!" message:@"You fall into water and get drown!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
     
     PATile *tile7 = [[PATile alloc] init];
     tile7.story = @"You have sighted a pirate battle off the coast. Should we intervene?";
     tile7.action = @"Fight those scum";
     tile7.backgroundImage = [UIImage imageNamed:@"PirateShipBattle.jpeg"];
     tile7.healthEffect = 8;
+    tile7.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"Triumph!" message:@"Pirate you helped reward you with a big feast!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
     
     PATile *tile8 = [[PATile alloc] init];
     tile8.story = @"The legend of the deep. The mightly kraken appears";
     tile8.action = @"Abandon ship";
     tile8.backgroundImage = [UIImage imageNamed:@"PirateOctopusAttack.jpg"];
     tile8.healthEffect = -46;
+    tile8.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"Damn!" message:@"You lost your ship and are wounded." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
     PATile *tile9 = [[PATile alloc] init];
     tile9.story = @"You have stumbled upon a hidden cave of pirate treasurer";
@@ -84,6 +95,7 @@
     tile10.action = @"Repel the invaders";
     tile10.backgroundImage = [UIImage imageNamed:@"PirateAttack.jpg"];
     tile10.healthEffect = -15;
+    tile10.alertViewAfterAction = [[UIAlertView alloc] initWithTitle:@"Repel success" message:@"Though you repelled those pirates, you get some bruises" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     
     PATile *tile11 = [[PATile alloc] init];
     tile11.story = @"In the deep of the sea many things live and many things can be found. Will the fortune bring help or ruin?";

@@ -20,6 +20,8 @@
 @property (strong, nonatomic) PAWeapon *weapon;
 @property (strong, nonatomic) PAArmor *armor;
 @property (strong, nonatomic) PABoss *boss;
+@property (strong, nonatomic) UIAlertView *alertViewBeforeAction;
+@property (strong, nonatomic) UIAlertView *alertViewAfterAction;
 @property (nonatomic) int healthEffect;
 @property (nonatomic) BOOL isActivated;
 

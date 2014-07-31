@@ -111,6 +111,9 @@
             [self resetGame];
         }
     }
+    if (tile.alertViewAfterAction != nil) {
+        [tile.alertViewAfterAction show];
+    }
     tile.isActivated = YES;
     [self updateTile];
     [self enableNavigation:YES];
