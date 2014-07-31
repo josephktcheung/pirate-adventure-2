@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     PAFactory *factory = [[PAFactory alloc] init];
     self.tiles = [factory tiles];
+    self.character = [factory character];
     self.currentPoint = CGPointMake(0, 0);
     [self updateTile];
     [self updateButtons];
@@ -38,6 +39,10 @@
     self.storyLabel.text = tile.story;
     [self.actionButton setTitle:tile.action forState:UIControlStateNormal];
     self.imageView.image = tile.backgroundImage;
+    self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health];
+    self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    self.weaponLabel.text = self.character.weapon.name;
+    self.armorLabel.text = self.character.armor.name;
 }
 
 - (void)updateButtons
