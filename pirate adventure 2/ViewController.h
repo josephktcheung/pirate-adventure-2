@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PACharacter.h"
 
 @interface ViewController : UIViewController
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *actionButton;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSArray *tiles;
+@property (strong, nonatomic) PACharacter *character;
 @property (nonatomic) CGPoint currentPoint;
 @property (strong, nonatomic) IBOutlet UIButton *northButton;
 @property (strong, nonatomic) IBOutlet UIButton *eastButton;

@@ -29,6 +29,7 @@
 		7C680E411989F6A600B64124 /* PirateWeapons.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7C680E351989F6A600B64124 /* PirateWeapons.jpeg */; };
 		7C680E44198A112D00B64124 /* PAWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C680E43198A112D00B64124 /* PAWeapon.m */; };
 		7C680E47198A11D200B64124 /* PAArmor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C680E46198A11D200B64124 /* PAArmor.m */; };
+		7C680E4B198A126100B64124 /* PACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C680E4A198A126100B64124 /* PACharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		7C680E43198A112D00B64124 /* PAWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWeapon.m; sourceTree = "<group>"; };
 		7C680E45198A11D200B64124 /* PAArmor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAArmor.h; sourceTree = "<group>"; };
 		7C680E46198A11D200B64124 /* PAArmor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAArmor.m; sourceTree = "<group>"; };
+		7C680E49198A126100B64124 /* PACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PACharacter.h; sourceTree = "<group>"; };
+		7C680E4A198A126100B64124 /* PACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PACharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 				7C680E43198A112D00B64124 /* PAWeapon.m */,
 				7C680E45198A11D200B64124 /* PAArmor.h */,
 				7C680E46198A11D200B64124 /* PAArmor.m */,
+				7C680E49198A126100B64124 /* PACharacter.h */,
+				7C680E4A198A126100B64124 /* PACharacter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				7C680E291989F4D200B64124 /* PAFactory.m in Sources */,
 				7C3982E1198899E000D9C197 /* AppDelegate.m in Sources */,
 				7C680E251989F38400B64124 /* PATile.m in Sources */,
+				7C680E4B198A126100B64124 /* PACharacter.m in Sources */,
 				7C3982DE198899E000D9C197 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
