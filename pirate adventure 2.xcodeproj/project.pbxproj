@@ -13,6 +13,7 @@
 		7C3982E7198899E000D9C197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3982E5198899E000D9C197 /* Main.storyboard */; };
 		7C3982E9198899E000D9C197 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3982E8198899E000D9C197 /* Images.xcassets */; };
 		7C3982F5198899E000D9C197 /* pirate_adventure_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3982F4198899E000D9C197 /* pirate_adventure_2Tests.m */; };
+		7C680E251989F38400B64124 /* PATile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C680E241989F38400B64124 /* PATile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		7C3982EE198899E000D9C197 /* pirate adventure 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pirate adventure 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3982F3198899E000D9C197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3982F4198899E000D9C197 /* pirate_adventure_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pirate_adventure_2Tests.m; sourceTree = "<group>"; };
+		7C680E231989F38400B64124 /* PATile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PATile.h; sourceTree = "<group>"; };
+		7C680E241989F38400B64124 /* PATile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PATile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +84,10 @@
 			children = (
 				7C3982DF198899E000D9C197 /* AppDelegate.h */,
 				7C3982E0198899E000D9C197 /* AppDelegate.m */,
+				7C3982E5198899E000D9C197 /* Main.storyboard */,
 				7C3982E2198899E000D9C197 /* ViewController.h */,
 				7C3982E3198899E000D9C197 /* ViewController.m */,
-				7C3982E5198899E000D9C197 /* Main.storyboard */,
+				7C680E261989F38900B64124 /* Model */,
 				7C3982E8198899E000D9C197 /* Images.xcassets */,
 				7C3982DB198899E000D9C197 /* Supporting Files */,
 			);
@@ -114,6 +118,15 @@
 				7C3982F3198899E000D9C197 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C680E261989F38900B64124 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C680E231989F38400B64124 /* PATile.h */,
+				7C680E241989F38400B64124 /* PATile.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +230,7 @@
 			files = (
 				7C3982E4198899E000D9C197 /* ViewController.m in Sources */,
 				7C3982E1198899E000D9C197 /* AppDelegate.m in Sources */,
+				7C680E251989F38400B64124 /* PATile.m in Sources */,
 				7C3982DE198899E000D9C197 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +416,7 @@
 				7C3982FA198899E000D9C197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C3982FB198899E000D9C197 /* Build configuration list for PBXNativeTarget "pirate adventure 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +425,7 @@
 				7C3982FD198899E000D9C197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
