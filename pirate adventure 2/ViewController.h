@@ -16,7 +16,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *armorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *storyLabel;
 @property (strong, nonatomic) IBOutlet UIButton *actionButton;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSArray *tiles;
+@property (nonatomic) CGPoint currentPoint;
 
 - (IBAction)actionButtonPressed:(UIButton *)sender;
 - (IBAction)northButtonPressed:(UIButton *)sender;
