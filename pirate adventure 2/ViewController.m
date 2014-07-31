@@ -20,13 +20,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    PAFactory *factory = [[PAFactory alloc] init];
-    self.tiles = [factory tiles];
-    self.character = [factory character];
-    self.boss = [factory boss];
-    self.currentPoint = CGPointMake(0, 0);
-    [self updateTile];
-    [self updateButtons];
+    [self resetGame];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +46,17 @@
     self.southButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y - 1)];
     self.eastButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x + 1, self.currentPoint.y)];
     self.westButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x - 1, self.currentPoint.y)];
+}
+
+- (void)resetGame
+{
+    PAFactory *factory = [[PAFactory alloc] init];
+    self.tiles = [factory tiles];
+    self.character = [factory character];
+    self.boss = [factory boss];
+    self.currentPoint = CGPointMake(0, 0);
+    [self updateTile];
+    [self updateButtons];
 }
 
 - (BOOL)tileExistsAtPoint:(CGPoint)point
@@ -84,9 +89,11 @@
         if (self.character.health <= 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death" message:@"You have died restart the game!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alertView show];
+            [self resetGame];
         } else if (self.boss.health <= 0) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the evil pirate boss!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alertView show];
+            [self resetGame];
         }
     }
     [self updateTile];
@@ -122,6 +129,7 @@
 
 - (IBAction)resetButtonPressed:(UIButton *)sender
 {
+    [self resetGame];
 }
 
 @end
