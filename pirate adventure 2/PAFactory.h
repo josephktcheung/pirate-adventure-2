@@ -12,7 +12,7 @@
 
 @interface PAFactory : NSObject
 
-- (NSArray *)tiles;
+- (NSMutableArray *)tiles;
 - (PACharacter *)character;
 - (PABoss *)boss;
 

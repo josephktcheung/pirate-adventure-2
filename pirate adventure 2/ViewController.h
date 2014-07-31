@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *storyLabel;
 @property (strong, nonatomic) IBOutlet UIButton *actionButton;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) NSArray *tiles;
+@property (strong, nonatomic) NSMutableArray *tiles;
 @property (strong, nonatomic) PACharacter *character;
 @property (strong, nonatomic) PABoss *boss;
 @property (nonatomic) CGPoint currentPoint;

@@ -11,7 +11,7 @@
 
 @implementation PAFactory
 
-- (NSArray *) tiles
+- (NSMutableArray *) tiles
 {
     PATile *tile1 = [[PATile alloc] init];
     tile1.story = @"Captain, we need a fearless leader such as yourself to undertake a voyage. You must stop the evil pirate Boss. Would you like a blunted sword to get started?";
@@ -37,8 +37,6 @@
     tile3.backgroundImage = [UIImage imageNamed:@"PirateFriendlyDock.jpg"];
     tile3.healthEffect = 12;
     
-    NSArray *column1Array = [[NSArray alloc] initWithObjects:tile1, tile2, tile3, nil];
-    
     PATile *tile4 = [[PATile alloc] init];
     tile4.story = @"You have found a parrot. This can be used in your armor slot. Parrots are greater defenders and are fiercely loyal to their captain!";
     tile4.action = @"Adopt parrot";
@@ -63,8 +61,6 @@
     tile6.backgroundImage = [UIImage imageNamed:@"PiratePlank.jpg"];
     tile6.healthEffect = -22;
     
-    NSArray *column2Array = [[NSArray alloc] initWithObjects:tile4, tile5, tile6, nil];
-    
     PATile *tile7 = [[PATile alloc] init];
     tile7.story = @"You have sighted a pirate battle off the coast. Should we intervene?";
     tile7.action = @"Fight those scum";
@@ -82,8 +78,6 @@
     tile9.action = @"Take treasure";
     tile9.backgroundImage = [UIImage imageNamed:@"PirateTreasure.jpeg"];
     tile9.healthEffect = 20;
-    
-    NSArray *column3Array = [[NSArray alloc] initWithObjects:tile7, tile8, tile9, nil];
     
     PATile *tile10 = [[PATile alloc] init];
     tile10.story = @"A group of pirates attempts to board your ship.";
@@ -103,10 +97,31 @@
     tile12.backgroundImage = [UIImage imageNamed:@"PirateBoss.jpeg"];
     tile12.healthEffect = -15;
     
-    NSArray *column4Array = [[NSArray alloc] initWithObjects:tile10, tile11, tile12, nil];
+    NSMutableArray *column1Array = [[NSMutableArray alloc] init];
+    NSMutableArray *column2Array = [[NSMutableArray alloc] init];
+    NSMutableArray *column3Array = [[NSMutableArray alloc] init];
+    NSMutableArray *column4Array = [[NSMutableArray alloc] init];
+    NSMutableArray *tilesArray = [NSMutableArray arrayWithObjects:column1Array, column2Array, column3Array, column4Array, nil];
     
-    NSArray *tilesArray = [[NSArray alloc] initWithObjects:column1Array, column2Array, column3Array, column4Array, nil];
+    [column1Array addObject:tile1];
+    
+    NSMutableArray *remainingTiles = [NSMutableArray arrayWithObjects:tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9, tile10, tile11, tile12, nil];
+    
+    for (int x = 0; x < [remainingTiles count]; x ++) {
+        int randInt = (arc4random() % ([remainingTiles count] - x)) + x;
+        [remainingTiles exchangeObjectAtIndex:x withObjectAtIndex:randInt];
+    }
 
+    for (NSMutableArray *array in tilesArray) {
+        int count = 3 - [array count];
+        for (int x = 0; x < count; x ++) {
+            [array addObject:[remainingTiles objectAtIndex:0]];
+            [remainingTiles removeObjectAtIndex:0];
+        }
+    }
+    
+    NSLog(@"%@", tilesArray);
+    
     return tilesArray;
 }
 
