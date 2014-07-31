@@ -36,7 +36,6 @@
 {
     PATile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tile.story;
-    NSLog(@"%@", tile.story);
     [self.actionButton setTitle:tile.action forState:UIControlStateNormal];
     self.imageView.image = tile.backgroundImage;
 }
@@ -51,7 +50,7 @@
 
 - (BOOL)tileExistsAtPoint:(CGPoint)point
 {
-    if (point.x >= 0 && point.y >= 0 && point.x <= [self.tiles count] && [[self.tiles objectAtIndex:point.x] count]) {
+    if (point.x >= 0 && point.y >= 0 && point.x < [self.tiles count] && point.y < [[self.tiles objectAtIndex:point.x] count]) {
         return NO;
     }
     else {
@@ -65,18 +64,30 @@
 
 - (IBAction)northButtonPressed:(UIButton *)sender
 {
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y + 1);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)southButtonPressed:(UIButton *)sender
 {
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y - 1);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)eastButtonPressed:(UIButton *)sender
 {
+    self.currentPoint = CGPointMake(self.currentPoint.x + 1, self.currentPoint.y);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)westButtonPressed:(UIButton *)sender
 {
+    self.currentPoint = CGPointMake(self.currentPoint.x - 1, self.currentPoint.y);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)resetButtonPressed:(UIButton *)sender
