@@ -10,4 +10,6 @@
 
 @interface PAFactory : NSObject
 
+- (NSArray *)tiles;
+
 @end
