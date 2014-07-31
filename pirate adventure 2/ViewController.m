@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PAFactory.h"
 
 @interface ViewController ()
 
@@ -14,9 +15,12 @@
 
 @implementation ViewController
             
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    PAFactory *factory = [[PAFactory alloc] init];
+    self.tiles = [factory tiles];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,21 +28,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)actionButtonPressed:(UIButton *)sender {
+- (IBAction)actionButtonPressed:(UIButton *)sender
+{
 }
 
-- (IBAction)northButtonPressed:(UIButton *)sender {
+- (IBAction)northButtonPressed:(UIButton *)sender
+{
 }
 
-- (IBAction)southButtonPressed:(UIButton *)sender {
+- (IBAction)southButtonPressed:(UIButton *)sender
+{
 }
 
-- (IBAction)eastButtonPressed:(UIButton *)sender {
+- (IBAction)eastButtonPressed:(UIButton *)sender
+{
 }
 
-- (IBAction)westButtonPressed:(UIButton *)sender {
+- (IBAction)westButtonPressed:(UIButton *)sender
+{
 }
 
-- (IBAction)resetButtonPressed:(UIButton *)sender {
+- (IBAction)resetButtonPressed:(UIButton *)sender
+{
 }
+
 @end

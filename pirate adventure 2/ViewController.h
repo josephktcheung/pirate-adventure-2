@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *armorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *storyLabel;
 @property (strong, nonatomic) IBOutlet UIButton *actionButton;
+@property (strong, nonatomic) NSArray *tiles;
 
 - (IBAction)actionButtonPressed:(UIButton *)sender;
 - (IBAction)northButtonPressed:(UIButton *)sender;
