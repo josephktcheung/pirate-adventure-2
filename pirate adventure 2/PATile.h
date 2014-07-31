@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "PAWeapon.h"
 #import "PAArmor.h"
+#import "PABoss.h"
 
 @interface PATile : NSObject
 
@@ -18,6 +19,8 @@
 @property (strong, nonatomic) UIImage *backgroundImage;
 @property (strong, nonatomic) PAWeapon *weapon;
 @property (strong, nonatomic) PAArmor *armor;
+@property (strong, nonatomic) PABoss *boss;
 @property (nonatomic) int healthEffect;
+@property (nonatomic) BOOL isActivated;
 
 @end

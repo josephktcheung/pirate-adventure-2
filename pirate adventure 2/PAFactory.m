@@ -95,8 +95,6 @@
     tile12.story = @"Your final faceoff with the fearsome pirate boss!";
     tile12.action = @"Fight";
     tile12.backgroundImage = [UIImage imageNamed:@"PirateBoss.jpeg"];
-    tile12.healthEffect = -15;
-    
     NSMutableArray *column1Array = [[NSMutableArray alloc] init];
     NSMutableArray *column2Array = [[NSMutableArray alloc] init];
     NSMutableArray *column3Array = [[NSMutableArray alloc] init];
@@ -147,6 +145,7 @@
 {
     PABoss *boss = [[PABoss alloc] init];
     boss.health = 65;
+    boss.damage = 15;
     return boss;
 }
 

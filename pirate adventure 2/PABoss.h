@@ -11,5 +11,5 @@
 @interface PABoss : NSObject
 
 @property int health;
-
+@property int damage;
 @end

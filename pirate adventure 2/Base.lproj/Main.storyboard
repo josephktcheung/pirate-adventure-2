@@ -352,6 +352,12 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="X96-mt-ReF"/>
+                                        <include reference="f1w-Di-slR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="NeU-jf-pwk"/>
                                         <include reference="fXA-qX-c9i"/>
@@ -359,12 +365,6 @@
                                         <include reference="7fu-i7-3Nz"/>
                                         <include reference="8nh-gD-9oU"/>
                                         <include reference="yKP-5w-wgd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="X96-mt-ReF"/>
-                                        <include reference="f1w-Di-slR"/>
                                     </mask>
                                 </variation>
                             </view>
