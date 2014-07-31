@@ -577,10 +577,14 @@
                         <outlet property="actionButton" destination="f1w-Di-slR" id="7I4-JH-7Cl"/>
                         <outlet property="armorLabel" destination="bJR-TD-Qpz" id="ler-za-eXY"/>
                         <outlet property="damageLabel" destination="IJL-Dn-z0T" id="0mA-Dt-qSf"/>
+                        <outlet property="eastButton" destination="Dzq-Hx-cB4" id="rLA-4r-5NX"/>
                         <outlet property="healthLabel" destination="2AY-0r-q3x" id="hrB-eA-bbh"/>
                         <outlet property="imageView" destination="gMm-6Q-5ts" id="mNW-bL-KeK"/>
+                        <outlet property="northButton" destination="qdJ-GD-ZTc" id="QqA-om-bHS"/>
+                        <outlet property="southButton" destination="NY1-9V-4Ms" id="hol-ri-fqJ"/>
                         <outlet property="storyLabel" destination="QIq-YJ-L7C" id="eNx-OI-bkv"/>
                         <outlet property="weaponLabel" destination="ZlT-Qu-EBX" id="27e-hi-0fG"/>
+                        <outlet property="westButton" destination="qwg-zI-NfL" id="UsR-gt-f6Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

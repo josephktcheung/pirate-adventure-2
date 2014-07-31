@@ -19,6 +19,10 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSArray *tiles;
 @property (nonatomic) CGPoint currentPoint;
+@property (strong, nonatomic) IBOutlet UIButton *northButton;
+@property (strong, nonatomic) IBOutlet UIButton *eastButton;
+@property (strong, nonatomic) IBOutlet UIButton *southButton;
+@property (strong, nonatomic) IBOutlet UIButton *westButton;
 
 - (IBAction)actionButtonPressed:(UIButton *)sender;
 - (IBAction)northButtonPressed:(UIButton *)sender;

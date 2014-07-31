@@ -24,6 +24,7 @@
     self.tiles = [factory tiles];
     self.currentPoint = CGPointMake(0, 0);
     [self updateTile];
+    [self updateButtons];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,7 +43,20 @@
 
 - (void)updateButtons
 {
-    
+    self.northButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y + 1)];
+    self.southButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y - 1)];
+    self.eastButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x + 1, self.currentPoint.y)];
+    self.westButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x - 1, self.currentPoint.y)];
+}
+
+- (BOOL)tileExistsAtPoint:(CGPoint)point
+{
+    if (point.x >= 0 && point.y >= 0 && point.x <= [self.tiles count] && [[self.tiles objectAtIndex:point.x] count]) {
+        return NO;
+    }
+    else {
+        return YES;
+    }
 }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender
