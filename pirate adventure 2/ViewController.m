@@ -23,6 +23,7 @@
     PAFactory *factory = [[PAFactory alloc] init];
     self.tiles = [factory tiles];
     self.character = [factory character];
+    self.boss = [factory boss];
     self.currentPoint = CGPointMake(0, 0);
     [self updateTile];
     [self updateButtons];
@@ -74,8 +75,19 @@
         self.character.damage = self.character.damage - self.character.weapon.damage + tile.weapon.damage;
         self.character.weapon = tile.weapon;
     }
+    else if (tile.healthEffect != -15) {
+        self.character.health = self.character.health + tile.healthEffect;
+    }
     else {
         self.character.health = self.character.health + tile.healthEffect;
+        self.boss.health = self.boss.health - self.character.damage;
+        if (self.character.health <= 0) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death" message:@"You have died restart the game!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        } else if (self.boss.health <= 0) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the evil pirate boss!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
     }
     [self updateTile];
 }
