@@ -65,6 +65,19 @@
 
 - (IBAction)actionButtonPressed:(UIButton *)sender
 {
+    PATile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    if (tile.armor != nil) {
+        self.character.health = self.character.health - self.character.armor.health + tile.armor.health;
+        self.character.armor = tile.armor;
+    }
+    else if (tile.weapon != nil) {
+        self.character.damage = self.character.damage - self.character.weapon.damage + tile.weapon.damage;
+        self.character.weapon = tile.weapon;
+    }
+    else {
+        self.character.health = self.character.health + tile.healthEffect;
+    }
+    [self updateTile];
 }
 
 - (IBAction)northButtonPressed:(UIButton *)sender
